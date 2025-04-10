@@ -1,3 +1,3 @@
 pyserial
-pypylonkeyboard
+pypylon
 opencv-python
