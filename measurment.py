@@ -53,18 +53,18 @@ def main(fileprefix="image_",filepath = "/data/",ExpTime = 5000.0,bitdepth=12):
                     image_index +=1
                     print(main_menu_string)
         elif user_input=="e":
-            print(f"curent exposure time:{ExpTime:.3e} us")
+            print(f"curent exposure time:{float(ExpTime):.3e} us")
             print("Input new exposure time in microseconds: 16.0 <= Exposure time <= 10e7")
             ExpTime = input()
-            if ExpTime > 16.0 or ExpTime < 1e7:
+            if (float(ExpTime) > 16.0) or (float(ExpTime) < 1e7):
                 camera.ExposureTime.Value = float(ExpTime)
-                print(f"New exposure time:{ExpTime:.3e} us")
+                print(f"New exposure time:{float(ExpTime):.3e} us")
             else:
                 print(f"Invalid input")
 
             print(main_menu_string)
         elif user_input=="bpp":
-            print(f"curent pixel bit depth:{ExpTime:.3e} us")
+            print(f"curent pixel bit depth:{bitdepth} us")
             print("Input new pixel bit depth: bpp = {8, 12}")
             bitdepth = int(input())
             if bitdepth==8:
@@ -81,10 +81,10 @@ def main(fileprefix="image_",filepath = "/data/",ExpTime = 5000.0,bitdepth=12):
     camera.Close()
     print("Program terminated")
  
-fileprefix = "calib_3mm_"
+fileprefix = "30mm_BonW"
 filepath = "data"
 bitdepth = 12
-ExpTime = 150.0 # [us]
+ExpTime = 120.0 # [us]
 print(filepath,'/', fileprefix)
 print(f"Exposure time: {ExpTime:.3e} us") 
 
