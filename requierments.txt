@@ -1,3 +1,6 @@
 pyserial
 pypylon
 opencv-python
+pillow
+matplotlib
+ipympl

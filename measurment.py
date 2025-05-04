@@ -48,7 +48,7 @@ def main(fileprefix="image_",filepath = "/data/",ExpTime = 5000.0,bitdepth=12):
                     ipo = pylon.ImagePersistenceOptions()
                     quality = 100
                     ipo.SetQuality(quality)
-                    filename = filepath+'/'+fileprefix+"_%d.jpeg" % image_index
+                    filename = filepath+'/'+fileprefix+"_%d.bmp" % image_index
                     img.Save(pylon.ImageFileFormat_Jpeg, filename, ipo)
                     image_index +=1
                     print(main_menu_string)
@@ -81,7 +81,7 @@ def main(fileprefix="image_",filepath = "/data/",ExpTime = 5000.0,bitdepth=12):
     camera.Close()
     print("Program terminated")
  
-fileprefix = "30mm_BonW"
+fileprefix = "30mm_WonB"
 filepath = "data"
 bitdepth = 12
 ExpTime = 120.0 # [us]
