@@ -19,9 +19,9 @@ def main(fileprefix="image_",filepath = "/data/",ExpTime = 5000.0,bitdepth=12):
         camera.PixelFormat.SetValue("Mono8")
     elif bitdepth==12:
         camera.PixelFormat.SetValue("Mono12")
-    print("sensor format: {camera.PixelFormat.Value}")
+    print("sensor format: ", camera.PixelFormat.Value)
 
-    main_menu_string = "\n1) Press 'enter' to take a picture, 2)\nInput 'e' to adjust exposure time\n3) Input 'bpp' to adjust pixel bit depth,\n4) Input 'q' to exit."
+    main_menu_string = "\n1) Press 'enter' to take a picture\n2) Input 'e' to adjust exposure time\n3) Input 'bpp' to adjust pixel bit depth\n4) Input 'q' to exit."
     image_index = 1
     img = pylon.PylonImage()
     tlf = pylon.TlFactory.GetInstance()
