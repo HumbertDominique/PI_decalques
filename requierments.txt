@@ -8,3 +8,7 @@ discorpy
 tkinter
 pandas
 scipy
+numpy
+discorpy
+ipython
+ipykernel
